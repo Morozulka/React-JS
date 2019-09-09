@@ -4,7 +4,7 @@ export default class WelcomeModal extends Component {
     constructor(props) {
 		super(props);
 		this.state = {
-			display: true
+			display: false
 		}
 	}
 
@@ -19,5 +19,8 @@ export default class WelcomeModal extends Component {
             : null;
     }
     
+    componentDidMount() {
+        this.setState({ display: true });
+    }
 
 }
